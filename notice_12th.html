@@ -12,10 +12,10 @@
     --dark: #1a1a2e;
     --navy: #16213e;
     --gold: #f0a500;
-    --light: #f0f2f7;
-    --white: #ffffff;
+    --light: #eef1f7;
     --border: #dde3ec;
     --fire: #e85d04;
+    --fire2: #f48c06;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,274 +25,195 @@
     background: var(--light);
     color: var(--dark);
     min-height: 100vh;
+    font-size: 18px;
   }
 
   /* 헤더 */
   .hero {
     background: linear-gradient(160deg, #0f3460 0%, var(--navy) 50%, #1a1a2e 100%);
     color: white;
-    padding: 44px 24px 36px;
+    padding: 48px 24px 40px;
     text-align: center;
     position: relative;
     overflow: hidden;
   }
-  .hero::before {
-    content: '🚒';
-    position: absolute;
-    top: 12px; left: 16px;
-    font-size: 48px;
-    opacity: 0.08;
-  }
-  .hero::after {
-    content: '🔥';
-    position: absolute;
-    bottom: 8px; right: 16px;
-    font-size: 48px;
-    opacity: 0.08;
-  }
+  .hero::before { content:'🚒'; position:absolute; top:10px; left:14px; font-size:56px; opacity:0.07; }
+  .hero::after  { content:'🔥'; position:absolute; bottom:6px; right:14px; font-size:56px; opacity:0.07; }
+
   .badge {
     display: inline-block;
     background: var(--gold);
     color: var(--dark);
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
-    padding: 4px 14px;
+    padding: 5px 16px;
     border-radius: 20px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
   }
   .hero h1 {
-    font-size: clamp(19px, 5vw, 26px);
+    font-size: clamp(22px, 6vw, 30px);
     font-weight: 900;
     line-height: 1.5;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
   .hero h1 span { color: var(--gold); }
-  .hero-sub {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 1px;
-    margin-top: 8px;
-  }
+  .hero-sub { font-size: 13px; color: rgba(255,255,255,0.5); letter-spacing:1px; margin-top:8px; }
 
   /* 감사 메시지 */
-  .message-wrap { margin: 20px 16px 0; }
+  .message-wrap { margin: 20px 14px 0; }
   .message-box {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    border-radius: 18px;
-    padding: 24px 20px 20px;
-    box-shadow: 0 8px 28px rgba(26,26,46,0.20);
-    position: relative;
-    overflow: hidden;
+    border-radius: 20px;
+    padding: 26px 20px 22px;
+    box-shadow: 0 8px 28px rgba(26,26,46,0.22);
+    position: relative; overflow: hidden;
   }
-  .message-box::before {
-    content: '🙏';
-    position: absolute;
-    right: 18px; top: 18px;
-    font-size: 40px;
-    opacity: 0.15;
-  }
+  .message-box::before { content:'🙏'; position:absolute; right:18px; top:18px; font-size:44px; opacity:0.13; }
   .message-accent {
     display: inline-block;
-    background: var(--gold);
-    color: var(--dark);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 12px;
+    background: var(--gold); color: var(--dark);
+    font-size: 11px; font-weight: 700; letter-spacing:1.5px;
+    padding: 4px 12px; border-radius: 20px; margin-bottom: 14px;
   }
-  .message-main {
-    font-size: 15px;
-    font-weight: 700;
-    color: #fff;
-    line-height: 1.75;
-    margin-bottom: 6px;
-  }
-  .message-main em { font-style: normal; color: var(--gold); }
-  .message-sub {
-    font-size: 13px;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.65;
-    margin-bottom: 18px;
-  }
+  .message-main { font-size: 19px; font-weight: 700; color:#fff; line-height:1.8; margin-bottom:8px; }
+  .message-main em { font-style:normal; color:var(--gold); }
+  .message-sub { font-size: 15px; color:rgba(255,255,255,0.65); line-height:1.7; margin-bottom:20px; }
   .contact-box {
-    background: rgba(240,165,0,0.12);
-    border: 1.5px solid rgba(240,165,0,0.3);
-    border-radius: 12px;
-    padding: 13px 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    background: rgba(240,165,0,0.13);
+    border: 1.5px solid rgba(240,165,0,0.35);
+    border-radius: 14px;
+    padding: 16px 18px;
+    display: flex; align-items: center; gap: 14px;
   }
-  .contact-icon { font-size: 22px; flex-shrink: 0; }
-  .contact-info { font-size: 12.5px; color: rgba(255,255,255,0.8); line-height: 1.6; }
-  .contact-info strong { color: var(--gold); font-weight: 700; display: block; font-size: 13px; }
-  .contact-tel { font-size: 16px; font-weight: 900; color: var(--gold); letter-spacing: 1px; }
+  .contact-icon { font-size: 26px; flex-shrink:0; }
+  .contact-info { font-size: 14px; color:rgba(255,255,255,0.85); line-height:1.7; }
+  .contact-info strong { color:var(--gold); font-weight:700; display:block; font-size:15px; }
+  .contact-tel { font-size: 20px; font-weight:900; color:var(--gold); letter-spacing:1.5px; }
 
   /* 섹션 타이틀 */
   .section-title {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: var(--navy);
-    padding: 0 16px;
-    margin: 28px 0 12px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    font-size: 17px; font-weight:800; letter-spacing:1px;
+    color: var(--navy); padding: 0 14px; margin: 30px 0 14px;
+    display:flex; align-items:center; gap:8px;
   }
-  .section-title::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--border);
-  }
+  .section-title::after { content:''; flex:1; height:2px; background:var(--border); }
 
-  /* 보조강사 명단 카드 */
+  /* ★ 보조강사 카드 (메인) ★ */
   .instructor-card {
-    margin: 0 16px 14px;
+    margin: 0 14px 18px;
     background: white;
-    border-radius: 14px;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    border-top: 4px solid var(--fire);
+    box-shadow: 0 4px 20px rgba(232,93,4,0.15);
+    border: 2px solid var(--fire);
   }
   .instructor-header {
-    background: linear-gradient(90deg, var(--fire) 0%, #f48c06 100%);
+    background: linear-gradient(90deg, var(--fire) 0%, var(--fire2) 100%);
     color: white;
-    padding: 12px 16px;
-    font-size: 13px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: nowrap;
+    padding: 16px 18px;
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   }
-  .instructor-header .date-badge {
+  .date-pill {
     background: rgba(255,255,255,0.25);
     color: white;
-    font-size: 12px;
-    font-weight: 700;
-    padding: 3px 10px;
-    border-radius: 20px;
-    white-space: nowrap;
-    flex-shrink: 0;
+    font-size: 17px; font-weight: 900;
+    padding: 5px 14px; border-radius: 30px;
+    white-space: nowrap; flex-shrink:0;
+    letter-spacing: 0.5px;
   }
-  .instructor-header .time-badge {
+  .time-pill {
     background: rgba(255,255,255,0.15);
     color: white;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 20px;
-    white-space: nowrap;
-    flex-shrink: 0;
+    font-size: 16px; font-weight: 700;
+    padding: 5px 12px; border-radius: 30px;
+    white-space: nowrap; flex-shrink:0;
   }
   .instructor-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0;
   }
   .instructor-item {
-    padding: 14px 16px;
+    padding: 18px 16px;
     border-right: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
+    position: relative;
   }
   .instructor-item:nth-child(even) { border-right: none; }
   .instructor-item:nth-last-child(-n+2) { border-bottom: none; }
+
+  .num-badge {
+    position: absolute; top: 10px; right: 10px;
+    width: 22px; height: 22px;
+    background: var(--light);
+    color: #bbb;
+    font-size: 11px; font-weight: 700;
+    border-radius: 50%;
+    display: flex; align-items:center; justify-content:center;
+  }
   .instructor-name {
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 3px;
+    font-size: 23px; font-weight: 900;
+    color: var(--dark); margin-bottom: 5px;
+    letter-spacing: -0.3px;
   }
   .instructor-org {
-    font-size: 11px;
-    color: #999;
-    line-height: 1.5;
+    font-size: 14px; color: #888; line-height: 1.6;
+    font-weight: 500;
   }
-  .time-info {
-    padding: 10px 16px;
-    font-size: 12px;
-    color: #888;
-    border-top: 1px dashed var(--border);
-    text-align: center;
+  .subject-bar {
+    background: #fff7f0;
+    padding: 12px 18px;
+    font-size: 13px; color: var(--fire);
+    font-weight: 700;
+    border-top: 1px dashed rgba(232,93,4,0.2);
+    display: flex; align-items:center; gap:6px;
   }
-  .time-info strong { color: var(--fire); }
 
-  /* 시간표 카드 */
-  .card {
-    margin: 0 16px 14px;
+  /* 교육 시간표 (축소, 덜 강조) */
+  .timetable-card {
+    margin: 0 14px 14px;
     background: white;
-    border-radius: 14px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    opacity: 0.85;
   }
-  .card-header {
-    background: var(--navy);
+  .timetable-header {
+    background: #4a5568;
     color: white;
-    padding: 12px 16px;
-    font-size: 13px;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    padding: 10px 14px;
+    font-size: 13px; font-weight: 700;
+    display: flex; align-items:center; gap:8px;
   }
-  .card-header .date-badge {
-    background: var(--gold);
-    color: var(--dark);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 2px 10px;
-    border-radius: 20px;
+  .timetable-header .t-date {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 11px; font-weight:700;
+    padding: 2px 8px; border-radius:20px;
   }
-  .time-row {
+  .t-row {
     display: flex;
-    padding: 11px 16px;
+    padding: 9px 14px;
     border-bottom: 1px solid var(--border);
-    font-size: 13px;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  .time-row:last-child { border-bottom: none; }
-  .time-label {
-    min-width: 88px;
-    color: #999;
-    font-size: 11.5px;
-    padding-top: 2px;
-    flex-shrink: 0;
-    line-height: 1.6;
-  }
-  .time-content { flex: 1; color: var(--dark); line-height: 1.7; }
-  .highlight-row { background: #fffbf0; }
-  .assistant-tag {
-    display: inline-block;
-    background: #fff0f0;
-    color: var(--red);
-    font-size: 11px;
-    font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-right: 4px;
-    margin-bottom: 4px;
-  }
-  .assistant-names {
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--fire);
-    margin-top: 4px;
-  }
-
-  /* 푸터 */
-  footer {
-    text-align: center;
-    padding: 32px 16px;
     font-size: 12px;
-    color: #bbb;
+    align-items: flex-start; gap:10px;
   }
-  footer strong { color: var(--navy); }
+  .t-row:last-child { border-bottom:none; }
+  .t-label { min-width:80px; color:#bbb; font-size:11px; padding-top:2px; flex-shrink:0; line-height:1.5; }
+  .t-content { flex:1; color:#666; line-height:1.6; }
+  .t-highlight { background:#fff9f5; }
+  .t-tag {
+    display:inline-block; background:#fff0f0; color:#c0392b;
+    font-size:10px; font-weight:700; padding:1px 6px;
+    border-radius:3px; margin-right:3px; margin-bottom:3px;
+  }
+  .t-names { font-size:12px; font-weight:700; color:var(--fire); margin-top:3px; }
+
+  footer {
+    text-align:center; padding:36px 16px;
+    font-size:13px; color:#bbb;
+  }
+  footer strong { color:var(--navy); }
 </style>
 </head>
 <body>
@@ -325,211 +246,152 @@
   </div>
 </div>
 
-<!-- 보조강사 출강 현황 (먼저) -->
+<!-- 보조강사 출강 현황 -->
 <div class="section-title">🧑‍🚒 보조강사 출강 현황</div>
 
-<!-- 6.23 보조강사 -->
+<!-- 6.23 화 -->
 <div class="instructor-card">
   <div class="instructor-header">
-    <span class="date-badge">6. 23. 화</span>
-    <span class="time-badge">10:00 ~ 16:50 · 6시간</span>
+    <span class="date-pill">6. 23. 화</span>
+    <span class="time-pill">10:00 ~ 16:50 · 6시간</span>
   </div>
   <div class="instructor-grid">
     <div class="instructor-item">
+      <div class="num-badge">1</div>
       <div class="instructor-name">김민정</div>
-      <div class="instructor-org">북부소방서 구포센터</div>
+      <div class="instructor-org">북부소방서<br>구포센터</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">2</div>
       <div class="instructor-name">노용래</div>
       <div class="instructor-org">울산 서울주소방서<br>119재난대응과</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">3</div>
       <div class="instructor-name">서승현</div>
-      <div class="instructor-org">남부소방서 광안센터</div>
+      <div class="instructor-org">남부소방서<br>광안센터</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">4</div>
       <div class="instructor-name">유재성</div>
       <div class="instructor-org">경남 양산소방서<br>현장대응단</div>
     </div>
   </div>
-  <div class="time-info">가상환경(VR) 실습 · 무전보조 4명</div>
+  <div class="subject-bar">🎯 가상환경(VR) 실습 · 무전보조 4명</div>
 </div>
 
-<!-- 6.25 보조강사 -->
+<!-- 6.25 목 -->
 <div class="instructor-card">
   <div class="instructor-header">
-    <span class="date-badge">6. 25. 목</span>
-    <span class="time-badge">10:00 ~ 16:50 · 6시간</span>
+    <span class="date-pill">6. 25. 목</span>
+    <span class="time-pill">10:00 ~ 16:50 · 6시간</span>
   </div>
   <div class="instructor-grid">
     <div class="instructor-item">
+      <div class="num-badge">1</div>
       <div class="instructor-name">김지영</div>
-      <div class="instructor-org">기장소방서 장안센터</div>
+      <div class="instructor-org">기장소방서<br>장안센터</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">2</div>
       <div class="instructor-name">박주화</div>
-      <div class="instructor-org">기장소방서 일광센터</div>
+      <div class="instructor-org">기장소방서<br>일광센터</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">3</div>
       <div class="instructor-name">안준식</div>
-      <div class="instructor-org">강서소방서 공항센터</div>
+      <div class="instructor-org">강서소방서<br>공항센터</div>
     </div>
     <div class="instructor-item">
-      <div class="instructor-name">조주흘</div>
-      <div class="instructor-org">금정소방서 현장대응단</div>
+      <div class="num-badge">4</div>
+      <div class="instructor-name">조주흠</div>
+      <div class="instructor-org">금정소방서<br>현장대응단</div>
     </div>
   </div>
-  <div class="time-info">가상환경(VR) 실습 · 무전보조 4명</div>
+  <div class="subject-bar">🎯 가상환경(VR) 실습 · 무전보조 4명</div>
 </div>
 
-<!-- 6.26 보조강사 -->
+<!-- 6.26 금 -->
 <div class="instructor-card">
   <div class="instructor-header">
-    <span class="date-badge">6. 26. 금</span>
-    <span class="time-badge">09:00 ~ 11:50 · 3시간</span>
+    <span class="date-pill">6. 26. 금</span>
+    <span class="time-pill">09:00 ~ 11:50 · 3시간</span>
   </div>
   <div class="instructor-grid">
     <div class="instructor-item">
+      <div class="num-badge">1</div>
       <div class="instructor-name">김세학</div>
       <div class="instructor-org">울산 중부소방서<br>성남센터</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">2</div>
       <div class="instructor-name">김민정</div>
-      <div class="instructor-org">북부소방서 구포센터</div>
+      <div class="instructor-org">북부소방서<br>구포센터</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">3</div>
       <div class="instructor-name">노용래</div>
       <div class="instructor-org">울산 서울주소방서<br>119재난대응과</div>
     </div>
     <div class="instructor-item">
+      <div class="num-badge">4</div>
       <div class="instructor-name">이상만</div>
-      <div class="instructor-org">부산진소방서 수정센터</div>
+      <div class="instructor-org">부산진소방서<br>수정센터</div>
     </div>
   </div>
-  <div class="time-info">가상환경(VR) 실습 · 무전보조 4명</div>
+  <div class="subject-bar">🎯 가상환경(VR) 실습 · 무전보조 4명</div>
 </div>
 
-<!-- 교육 시간표 (나중에) -->
-<div class="section-title">📋 교육 시간표</div>
+<!-- 교육 시간표 (참고용) -->
+<div class="section-title" style="opacity:0.6;">📋 교육 시간표 (참고)</div>
 
-<!-- 6.22 월 -->
-<div class="card">
-  <div class="card-header">
-    <span class="date-badge">6. 22. 월</span>
-    강의 일정
-  </div>
-  <div class="time-row">
-    <div class="time-label">09:00~09:50<br>1교시</div>
-    <div class="time-content">입교안내 및 양성평등의 이해</div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">10:00~11:50<br>2~3교시</div>
-    <div class="time-content">재난현장 지휘시스템의 이해</div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">13:00~13:50<br>4교시</div>
-    <div class="time-content">현장지휘관 자격인증제의 이해</div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">14:00~15:50<br>5~6교시</div>
-    <div class="time-content">지휘통제절차의 해설</div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">16:00~16:50<br>7교시</div>
-    <div class="time-content">가상환경(VR) 사용법<br><span class="assistant-tag">지휘 교수단</span></div>
+<!-- 6.22 -->
+<div class="timetable-card">
+  <div class="timetable-header"><span class="t-date">6. 22. 월</span> 강의 일정</div>
+  <div class="t-row"><div class="t-label">09:00~09:50</div><div class="t-content">입교안내 및 양성평등의 이해</div></div>
+  <div class="t-row"><div class="t-label">10:00~11:50</div><div class="t-content">재난현장 지휘시스템의 이해</div></div>
+  <div class="t-row"><div class="t-label">13:00~13:50</div><div class="t-content">현장지휘관 자격인증제의 이해</div></div>
+  <div class="t-row"><div class="t-label">14:00~15:50</div><div class="t-content">지휘통제절차의 해설</div></div>
+  <div class="t-row"><div class="t-label">16:00~16:50</div><div class="t-content">가상환경(VR) 사용법</div></div>
+</div>
+
+<!-- 6.23 -->
+<div class="timetable-card">
+  <div class="timetable-header"><span class="t-date">6. 23. 화</span> 강의 일정</div>
+  <div class="t-row"><div class="t-label">09:00~09:50</div><div class="t-content">재난현장 상황보고</div></div>
+  <div class="t-row t-highlight">
+    <div class="t-label">10:00~16:50</div>
+    <div class="t-content">가상환경(VR) 실습<br><span class="t-tag">보조강사 4명</span><div class="t-names">김민정 · 노용래 · 서승현 · 유재성</div></div>
   </div>
 </div>
 
-<!-- 6.23 화 -->
-<div class="card">
-  <div class="card-header">
-    <span class="date-badge">6. 23. 화</span>
-    강의 일정
-  </div>
-  <div class="time-row">
-    <div class="time-label">09:00~09:50<br>1교시</div>
-    <div class="time-content">재난현장 상황보고</div>
-  </div>
-  <div class="time-row highlight-row">
-    <div class="time-label">10:00~16:50<br>2~7교시</div>
-    <div class="time-content">
-      가상환경(VR) 실습<br>
-      <span class="assistant-tag">지휘 교수단</span>
-      <span class="assistant-tag">보조강사 4명</span>
-      <div class="assistant-names">김민정 · 노용래 · 서승현 · 유재성</div>
-    </div>
+<!-- 6.24 -->
+<div class="timetable-card">
+  <div class="timetable-header"><span class="t-date">6. 24. 수</span> 강의 일정</div>
+  <div class="t-row"><div class="t-label">09:00~09:50</div><div class="t-content">초급 자격인증 실기 평가표 해설</div></div>
+  <div class="t-row"><div class="t-label">10:00~16:50</div><div class="t-content">가상환경(VR) 실습 · 지휘 교수단</div></div>
+</div>
+
+<!-- 6.25 -->
+<div class="timetable-card">
+  <div class="timetable-header"><span class="t-date">6. 25. 목</span> 강의 일정</div>
+  <div class="t-row"><div class="t-label">09:00~09:50</div><div class="t-content">전술상황판 작성요령 및 실습</div></div>
+  <div class="t-row t-highlight">
+    <div class="t-label">10:00~16:50</div>
+    <div class="t-content">A : 가상환경(VR) 실습 / B : 개인역량 평가<br><span class="t-tag">보조강사 4명</span><div class="t-names">김지영 · 박주화 · 안준식 · 조주흠</div></div>
   </div>
 </div>
 
-<!-- 6.24 수 -->
-<div class="card">
-  <div class="card-header">
-    <span class="date-badge">6. 24. 수</span>
-    강의 일정
+<!-- 6.26 -->
+<div class="timetable-card">
+  <div class="timetable-header"><span class="t-date">6. 26. 금</span> 강의 일정</div>
+  <div class="t-row t-highlight">
+    <div class="t-label">09:00~11:50</div>
+    <div class="t-content">A : 가상환경(VR) 실습 / B : 개인역량 평가<br><span class="t-tag">보조강사 4명</span><div class="t-names">김세학 · 김민정 · 노용래 · 이상만</div></div>
   </div>
-  <div class="time-row">
-    <div class="time-label">09:00~09:50<br>1교시</div>
-    <div class="time-content">초급 자격인증 실기 평가표 해설</div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">10:00~16:50<br>2~7교시</div>
-    <div class="time-content">
-      가상환경(VR) 실습<br>
-      <span class="assistant-tag">지휘 교수단</span>
-    </div>
-  </div>
-</div>
-
-<!-- 6.25 목 -->
-<div class="card">
-  <div class="card-header">
-    <span class="date-badge">6. 25. 목</span>
-    강의 일정
-  </div>
-  <div class="time-row">
-    <div class="time-label">09:00~09:50<br>1교시</div>
-    <div class="time-content">전술상황판 작성요령 및 실습</div>
-  </div>
-  <div class="time-row highlight-row">
-    <div class="time-label">10:00~16:50<br>2~7교시</div>
-    <div class="time-content">
-      A훈련실 : 가상환경(VR) 실습<br>
-      B훈련실 : 개인역량 평가<br>
-      <span class="assistant-tag">지휘 교수단</span>
-      <span class="assistant-tag">보조강사 4명</span>
-      <div class="assistant-names">김지영 · 박주화 · 안준식 · 조주흘</div>
-    </div>
-  </div>
-</div>
-
-<!-- 6.26 금 -->
-<div class="card">
-  <div class="card-header">
-    <span class="date-badge">6. 26. 금</span>
-    강의 일정
-  </div>
-  <div class="time-row highlight-row">
-    <div class="time-label">09:00~11:50<br>1~3교시</div>
-    <div class="time-content">
-      A훈련실 : 가상환경(VR) 실습<br>
-      B훈련실 : 개인역량 평가<br>
-      <span class="assistant-tag">지휘 교수단</span>
-      <span class="assistant-tag">보조강사 4명</span>
-      <div class="assistant-names">김세학 · 김민정 · 노용래 · 이상만</div>
-    </div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">13:00~13:50<br>4교시</div>
-    <div class="time-content">현장지휘관의 심리와 의사결정</div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">14:00~14:50<br>5교시</div>
-    <div class="time-content">지휘사례 공유</div>
-  </div>
-  <div class="time-row">
-    <div class="time-label">15:00~16:50<br>6~7교시</div>
-    <div class="time-content">교육성과측정</div>
-  </div>
+  <div class="t-row"><div class="t-label">13:00~13:50</div><div class="t-content">현장지휘관의 심리와 의사결정</div></div>
+  <div class="t-row"><div class="t-label">14:00~14:50</div><div class="t-content">지휘사례 공유</div></div>
+  <div class="t-row"><div class="t-label">15:00~16:50</div><div class="t-content">교육성과측정</div></div>
 </div>
 
 <footer>
